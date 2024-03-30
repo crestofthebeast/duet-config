@@ -132,7 +132,7 @@
 
 	combo_j {
             timeout-ms = <50>;
-            key-positions = <l 2>;
+            key-positions = <1 2>;
             bindings = <&kp J>;
             layers = <0>;
         };
