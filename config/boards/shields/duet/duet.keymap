@@ -24,7 +24,6 @@
 #define SHIFT_TAP    170
 #define QUICK_TAP    105
 
-#define SK(KEY) &nk KEY KEY
 #define HYP(KEY) LG(LA(LS(LC(key))))
 #define MEH(KEY) LA(LS(LC(key)))
 
@@ -36,14 +35,14 @@
     flavor = "tap-preferred";
     retro-tap;
     quick-tap-ms = <125>;
-    tapping_term_ms = <175>;
+    tapping-term-ms = <175>;
 };
 
 &lt {
     flavor = "tap-preferred";
     retro-tap;
     quick-tap-ms = <125>;
-    tapping_term_ms = <175>;
+    tapping-term-ms = <175>;
 };
 
 &encoder {
@@ -54,14 +53,14 @@
     behaviors {
         // modifier stuff //
         gqt: global-quick-tap {
-	    compatible = "zmk,behavior-hold-tap";
-	    label = "GLOBAL_QUICK_TAP";
-	    #binding-cells = <2>;
-	    flavor = "tap-preferred";
-	    tapping-term-ms = <200>;
-	    quick-tap-ms = <125>;
-	    global-quick-tap;
-	    bindings = <&kp>, <&kp>;
+            compatible = "zmk,behavior-hold-tap";
+            label = "GLOBAL_QUICK_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            bindings = <&kp>, <&kp>;
 	    };
 
         skq: sticky_key_quick_release {
