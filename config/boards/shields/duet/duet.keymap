@@ -20,12 +20,30 @@
 #define KEYS_R 5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33  // right-hand keys
 #define THUMBS 34 35 36 37 38 39
 
-&lt {
-    tapping-term-ms = <150>;
+#define TAPPING_TERM 210
+#define SHIFT_TAP    170
+#define QUICK_TAP    105
+
+#define SK(KEY) &nk KEY KEY
+#define HYP(KEY) LG(LA(LS(LC(key))))
+#define MEH(KEY) LA(LS(LC(key)))
+
+&sk {
+  release-after-ms = <60000>;
 };
 
 &mt {
-    tapping-term-ms = <150>;
+    flavor = "tap-preferred";
+    retro-tap;
+    quick-tap-ms = <125>;
+    tapping_term_ms = <175>;
+};
+
+&lt {
+    flavor = "tap-preferred";
+    retro-tap;
+    quick-tap-ms = <125>;
+    tapping_term_ms = <175>;
 };
 
 &encoder {
@@ -34,15 +52,83 @@
 
 / {
     behaviors {
-        // hsl: homerow_shift_l {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     #binding-cells = <2>;
-        //     tapping-term-ms = <140>;
-        //     quick-tap-ms = <0>;
-        //     require-prior-idle-ms = <30>;
-        //     flavor = "tap-preferred";
-        //     bindings = <&kp>, <&kp>;
-        // };
+        // modifier stuff //
+        gqt: global-quick-tap {
+	    compatible = "zmk,behavior-hold-tap";
+	    label = "GLOBAL_QUICK_TAP";
+	    #binding-cells = <2>;
+	    flavor = "tap-preferred";
+	    tapping-term-ms = <200>;
+	    quick-tap-ms = <125>;
+	    global-quick-tap;
+	    bindings = <&kp>, <&kp>;
+	    };
+
+        skq: sticky_key_quick_release {
+            compatible = "zmk,behavior-sticky-key";
+            label = "STICKY_KEY_QUICK_RELEASE";
+            #binding-cells = <1>;
+            bindings = <&kp>;
+            release-after-ms = <1000>;
+            quick-release;
+        };
+	
+        gqt: global-quick-tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "GLOBAL_QUICK_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            bindings = <&kp>, <&kp>;
+        };	
+
+        // Sticky key on tap, normal key on hold
+    	// Useful for modifier-clicking without the modifier remaining active
+    	nk: not_so_sticky_key {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NOT_SO_STICKY_KEY";
+            #binding-cells = <2>;
+            tapping_term_ms = <250>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&sk>;
+        };
+
+
+        // custom keys //
+        dang: dot_bang {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_BANG";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp EXCL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        quomma: comma_question {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_QUESTION";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp QMARK>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        parens: lpar_rpar {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LPAR_RPAR";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR>, <&kp RPAR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        colons: colon_semi {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COLON_SEMI";
+            #binding-cells = <0>;
+            bindings = <&kp COLON>, <&kp SEMI>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+	
     };
 
     macros {
@@ -68,17 +154,17 @@
 
         default_layer {
             bindings = <
-                           &kp Q        &kp W        &kp F         &kp P         &kp X            &kp COLON  &kp M         &kp COMMA     &kp DOT      &kp P
-                &kp SLASH  &kp R        &kp S        &kp T         &kp H         &kp B            &kp X      &kp N         &kp E         &kp A        &kp I           &kp P
-                &kp Q      &kp V        &kp C        &kp G         &kp D         &kp N0           &kp X      &kp L         &kp U         &kp O        &kp Y           &kp Z
-                                                     &kp SQT       &lt NAV SPACE &kp ESC          &kp ENTER  &kp LSHFT     &sl SYM
+                           &kp Q        &kp W        &kp F         &kp P         &kp X            &colons    &kp M         &quomma       &dang        &kp P
+                &kp SLASH  &kp R        &kp S        &kp T         &kp H         &kp B            &parens    &kp N         &kp E         &kp A        &kp I           &kp P
+                &kp Q      &kp V        &kp C        &kp G         &kp D         &kp K            &kp X      &kp L         &kp U         &kp O        &kp Y           &kp Z
+                                                     &kp SQT       &lt NAV SPACE &kp ESC          &kp ENTER  &sk LSHFT     &sl SYM
                 &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &bootloader                                                                        &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        nav_layer {
+        nav_layer 
             bindings = <
                           &none     &none     &none     &none     &none           &kp PG_UP &none     &none     &none     &none
                 &none     &kp PSCRN &sk LALT  &sk LSFT  &sk LCTL  &none           &none     &kp LEFT  &kp DOWN  &kp RIGHT &none     &none
