@@ -152,7 +152,7 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        nav_layer 
+        nav_layer {
             bindings = <
                           &none     &none     &none     &none     &none           &kp PG_UP &none     &none     &none     &none
                 &none     &kp PSCRN &sk LALT  &sk LSFT  &sk LCTL  &none           &none     &kp LEFT  &kp DOWN  &kp RIGHT &none     &none
