@@ -151,10 +151,10 @@
         default_layer {
             bindings = <
                            &kp Q        &kp W        &kp F         &kp P         &kp X            &colons    &kp M         &quomma       &dang        &kp P
-                &kp SLASH  &kp R        &kp S        &kp T         &kp H         &kp B            &parens    &kp N         &kp E         &kp A        &kp I           &kp P
-                &kp Q      &kp V        &kp C        &kp G         &kp D         &kp K            &kp X      &kp L         &kp U         &kp O        &kp Y           &kp Z
+                &kp SLASH  &kp R        &gqt LALT S  &gqt LSFT T   &gqt LCTL H   &kp B            &parens    &gqt RCTL N   &gqt RSFT E   &gqt RALT A  &kp I           &kp P
+                &kp Q      &kp V        &kp C        &gqt LGUI G   &kp D         &kp K            &kp X      &kp L         &gqt RGUI U   &kp O        &kp Y           &kp Z
                                                      &kp SQT       &lt NAV SPACE &kp ESC          &kp ENTER  &sk LSHFT     &sl SYM
-                &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &bootloader                                                                        &none
+                &bt BT_PRV  &kp DOWN  &kp UP  &bt BT_NXT  &bootloader                                                                        &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;

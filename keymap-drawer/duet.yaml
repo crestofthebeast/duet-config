@@ -12,25 +12,25 @@ layers:
   - P
   - /
   - R
-  - S
-  - T
-  - H
+  - {t: S, h: Alt}
+  - {t: T, h: LSFT}
+  - {t: H, h: LCTL}
   - B
   - {t: (, s: )}
-  - N
-  - E
-  - A
+  - {t: N, h: RCTL}
+  - {t: E, h: RSFT}
+  - {t: A, h: AltGr}
   - I
   - P
   - Q
   - V
   - C
-  - G
+  - {t: G, h: Gui}
   - D
   - K
   - X
   - L
-  - U
+  - {t: U, h: Gui}
   - O
   - Y
   - Z
@@ -40,10 +40,10 @@ layers:
   - ⏎
   - {t: Shift, h: sticky}
   - {t: sym, h: sticky}
-  - ←
+  - BT PRV
   - ↓
   - ↑
-  - →
+  - BT NXT
   - Boot
   - ''
   nav:
