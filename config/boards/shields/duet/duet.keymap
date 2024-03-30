@@ -72,7 +72,7 @@
                 &kp SLASH  &kp R        &kp S        &kp T         &kp H         &kp B            &kp X      &kp N         &kp E         &kp A        &kp I           &kp P
                 &kp Q      &kp V        &kp C        &kp G         &kp D         &kp N0           &kp X      &kp L         &kp U         &kp O        &kp Y           &kp Z
                                                      &kp SQT       &lt NAV SPACE &kp ESC          &kp ENTER  &kp LSHFT     &sl SYM
-                &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none                                                                        &none
+                &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &bootloader                                                                        &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -80,9 +80,9 @@
 
         nav_layer {
             bindings = <
-                          &none     &none     &none     &none     &none           &none     &none     &none     &none     &none
-                &none     &none     &none     &none     &none     &none           &none     &none     &none     &none     &none     &none
-                &none     &none     &none     &none     &none     &none           &none     &none     &none     &none     &none     &none
+                          &none     &none     &none     &none     &none           &kp PG_UP &none     &none     &none     &none
+                &none     &kp PSCRN &sk LALT  &sk LSFT  &sk LCTL  &none           &none     &kp LEFT  &kp DOWN  &kp RIGHT &none     &none
+                &none     &none     &sk LGUI  &none     &kp TAB   &none           &kp PG_DN &kp BSPC  &kp UP    &none     &none     &none
                                               &none     &none     &none           &none     &none     &none
                 &none  &none  &none  &none  &none                                                                         &none
             >;
