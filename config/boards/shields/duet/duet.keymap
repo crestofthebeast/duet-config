@@ -200,5 +200,18 @@
             >;
         };
 
+// keymap drawer stub layers
+#ifdef KEYMAP_DRAWER
+        meow_layer {
+            bindings = <
+                          &none     &none     &none     &none     &none           &none     &none     &none     &none     &none
+                &none     &none     &none     &none     &none     &none           &none     &none     &none     &none     &none     &none
+                &none     &none     &none     &none     &none     &none           &none     &none     &none     &none     &none     &none
+                                              &none     &none     &none           &none     &none     &none
+                &none  &none  &none  &none  &none                                                                         &none
+            >;
+        };
+#endif
+
     };
 };
