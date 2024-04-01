@@ -153,7 +153,7 @@
                            &kp Q        &kp W        &kp F         &kp P         &kp X            &colons    &kp M         &quomma       &dang        &kp P
                 &kp SLASH  &kp R        &gqt LALT S  &gqt LSFT T   &gqt LCTL H   &kp B            &parens    &gqt RCTL N   &gqt RSFT E   &gqt RALT A  &kp I           &kp P
                 &kp Q      &kp V        &kp C        &gqt LGUI G   &kp D         &kp K            &kp X      &kp L         &gqt RGUI U   &kp O        &kp Y           &kp Z
-                                                     &kp SQT       &lt NAV SPACE &kp ESC          &kp ENTER  &sk LSHFT     &sl SYM
+                                                     &kp SQT       &lt NAV SPACE &kp ESC          &kp ENTER  &skq LSHFT    &sl SYM
                 &bt BT_PRV  &kp DOWN  &kp UP  &bt BT_NXT  &bootloader                                                                        &none
             >;
 
