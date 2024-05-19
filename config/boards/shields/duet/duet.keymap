@@ -150,9 +150,9 @@
 
         default_layer {
             bindings = <
-                           &kp Q        &kp W        &kp F         &kp P         &kp X            &colons    &kp M         &quomma       &dang        &kp P
-                &kp SLASH  &kp R        &gqt LALT S  &gqt LSFT T   &gqt LCTL H   &kp B            &parens    &gqt RCTL N   &gqt RSFT E   &gqt RALT A  &kp I           &kp P
-                &kp Q      &kp V        &kp C        &gqt LGUI G   &kp D         &kp K            &kp X      &kp L         &gqt RGUI U   &kp O        &kp Y           &kp Z
+                           &kp Q        &kp W        &kp F         &kp P         &kp B            &colons    &kp M         &quomma       &dang        &kp P
+                &kp Q      &kp R        &gqt LALT S  &gqt LSFT T   &gqt LCTL H   &kp K            &kp X      &gqt RCTL N   &gqt RSFT E   &gqt RALT A  &kp I      &kp SLASH
+                &kp Q      &kp V        &kp C        &gqt LGUI G   &kp D         &kp K            &parens    &kp L         &gqt RGUI U   &kp O        &kp Y      &kp Z
                                                      &kp SQT       &lt NAV SPACE &kp ESC          &kp ENTER  &skq LSHFT    &sl SYM
                 &bt BT_PRV  &kp DOWN  &kp UP  &bt BT_NXT  &bootloader                                                                        &none
             >;
@@ -172,9 +172,9 @@
 
         sym_layer {
             bindings = <
-                          &none     &kp N7    &kp N8    &kp N9    &kp BSLH        &kp AMPS  &kp RBRC  &kp RBKT  &dang     &none
-                &none     &kp N0    &kp N3    &kp N2    &kp N1    &kp GRAVE       &kp STAR  &kp LBRC  &kp LBKT  &kp SLASH &kp PIPE  &kp DOLLAR
-                &none     &kp CARET &kp N4    &kp N5    &kp N6    &kp TILDE       &kp EQUAL &kp MINUS &kp LT    &kp GT    &kp PRCNT &none
+                          &none     &kp N7    &kp N8    &kp N9    &kp BSLH        &kp GRAVE &kp STAR  &quomma   &dang     &none
+                &none     &kp N0    &kp N3    &kp N2    &kp N1    &kp PLUS        &kp EQUAL &kp LPAR  &kp LBRC  &kp LBKT  &kp AT     &kp PIPE
+                &none     &kp TILDE &kp N4    &kp N5    &kp N6    &kp TILDE       &kp EQUAL &kp MINUS &kp LT    &kp GT    &kp DOLLAR &none
                                               &none     &none     &kp N0          &none     &none     &none
                 &none  &none  &none  &none  &none                                                                         &none
             >;
