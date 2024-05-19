@@ -202,7 +202,7 @@ combos:
   k: _
   l: [default]
 - p: [8, 19]
-  k: RBKT; layers = <0
+  k: ']'
   l: [default]
 - p: [7, 18]
   k: '}'

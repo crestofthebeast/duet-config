@@ -154,7 +154,7 @@
 	combo_rbkt {
             timeout-ms = <50>;
             key-positions = <8 19>;
-            bindings = <&kp RBKT;
+            bindings = <&kp RBKT>;
             layers = <0>;
         };
 
