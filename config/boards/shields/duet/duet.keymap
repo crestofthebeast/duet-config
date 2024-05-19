@@ -143,6 +143,27 @@
             bindings = <&kp UNDER>;
             layers = <0>;
         };
+
+	combo_rpar {
+            timeout-ms = <50>;
+            key-positions = <6 17>;
+            bindings = <&kp UNDER>;
+            layers = <0>;
+        };
+
+	combo_rbkt {
+            timeout-ms = <50>;
+            key-positions = <8 19>;
+            bindings = <&kp RBKT;
+            layers = <0>;
+        };
+
+	combo_rbrc {
+            timeout-ms = <50>;
+            key-positions = <7 18>;
+            bindings = <&kp RBRC>;
+            layers = <0>;
+        };
     };
 
     keymap {
