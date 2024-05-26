@@ -195,15 +195,18 @@ combos:
 - p: [1, 2]
   k: J
   l: [default]
+- p: [2, 3]
+  k: '#'
+  l: [default]
 - p: [7, 8]
   k: _
   l: [default]
 - p: [6, 17]
   k: )
-  l: [default]
+  l: [default, nav]
 - p: [8, 19]
   k: ']'
-  l: [default]
+  l: [default, nav]
 - p: [7, 18]
   k: '}'
-  l: [default]
+  l: [default, nav]

@@ -137,6 +137,13 @@
             layers = <0>;
         };
 
+	combo_hash {
+            timeout-ms = <50>;
+            key-positions = <2 3>;
+            bindings = <&kp HASH>;
+            layers = <0>;
+        };
+
         combo_underscore {
             timeout-ms = <50>;
             key-positions = <7 8>;
@@ -148,21 +155,21 @@
             timeout-ms = <50>;
             key-positions = <6 17>;
             bindings = <&kp RPAR>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
 	combo_rbkt {
             timeout-ms = <50>;
             key-positions = <8 19>;
             bindings = <&kp RBKT>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
 	combo_rbrc {
             timeout-ms = <50>;
             key-positions = <7 18>;
             bindings = <&kp RBRC>;
-            layers = <0>;
+            layers = <0 1>;
         };
     };
 
