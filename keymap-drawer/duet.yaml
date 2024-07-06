@@ -69,7 +69,7 @@ layers:
   - →
   - ''
   - ''
-  - ''
+  - {t: sys, h: sticky}
   - ''
   - {t: Gui, h: sticky}
   - ''
@@ -165,7 +165,7 @@ layers:
   - ''
   - ''
   - BT clear
-  - ''
+  - {type: held}
   - ''
   - ''
   - ''
@@ -178,7 +178,7 @@ layers:
   - ''
   - ''
   - ''
-  - ''
+  - {type: held}
   - ''
   - {t: ▽, type: trans}
   - Boot
