@@ -22,7 +22,7 @@
 
 #define TAPPING_TERM 210
 #define SHIFT_TAP    170
-#define QUICK_TAP    105
+#define QUICK_TAP    130
 
 #define HYP(KEY) LG(LA(LS(LC(key))))
 #define MEH(KEY) LA(LS(LC(key)))
@@ -34,15 +34,15 @@
 &mt {
     flavor = "tap-preferred";
     retro-tap;
-    quick-tap-ms = <125>;
-    tapping-term-ms = <175>;
+    quick-tap-ms = <140>;
+    tapping-term-ms = <200>;
 };
 
 &lt {
     flavor = "tap-preferred";
     retro-tap;
-    quick-tap-ms = <125>;
-    tapping-term-ms = <175>;
+    quick-tap-ms = <140>;
+    tapping-term-ms = <200>;
 };
 
 &encoder {
@@ -58,7 +58,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
+            quick-tap-ms = <140>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
 	    };
