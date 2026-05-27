@@ -57,8 +57,8 @@
             label = "GLOBAL_QUICK_TAP";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <140>;
+            tapping-term-ms = <230>;
+            quick-tap-ms = <160>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
 	    };
@@ -137,19 +137,26 @@
             layers = <0>;
         };
 
-	combo_hash {
+	combo_b {
             timeout-ms = <50>;
             key-positions = <2 3>;
-            bindings = <&kp HASH>;
+            bindings = <&kp B>;
             layers = <0>;
         };
 
-        combo_underscore {
+	combo_k {
             timeout-ms = <50>;
-            key-positions = <7 8>;
-            bindings = <&kp UNDER>;
+            key-positions = <3 14>;
+            bindings = <&kp K>;
             layers = <0>;
         };
+
+	combo_underscore {
+		timeout-ms = <50>;
+		key-positions = <7 8>;
+		bindings = <&kp UNDER>;
+		layers = <0>;
+	};
 
 	combo_rpar {
             timeout-ms = <50>;
@@ -179,7 +186,7 @@
         default_layer {
             bindings = <
                            &kp Q        &kp W        &kp F         &kp P         &kp B            &colons    &kp M         &quomma       &dang        &kp P
-                &kp Q      &kp R        &gqt LALT S  &gqt LSFT T   &gqt LCTL H   &kp K            &kp X      &gqt RCTL N   &gqt RSFT E   &gqt RALT A  &kp I      &kp SLASH
+                &kp K      &kp R        &gqt LALT S  &gqt LSFT T   &gqt LCTL H   &kp K            &kp X      &gqt RCTL N   &gqt RSFT E   &gqt RALT A  &kp I      &kp SLASH
                 &kp Q      &kp V        &kp C        &gqt LGUI G   &kp D         &kp K            &parens    &kp L         &gqt RGUI U   &kp O        &kp Y      &kp Z
                                                      &kp SQT       &lt NAV SPACE &kp ESC          &kp ENTER  &skq LSHFT    &sl SYM
                 &bt BT_PRV  &kp DOWN  &kp UP  &bt BT_NXT  &bootloader                                                                        &none

@@ -11,7 +11,7 @@ layers:
   - {t: ',', s: '?'}
   - {t: ., s: '!'}
   - P
-  - Q
+  - K
   - R
   - {t: S, h: Alt}
   - {t: T, h: LSFT}
@@ -197,7 +197,10 @@ combos:
   k: J
   l: [default]
 - p: [2, 3]
-  k: '#'
+  k: B
+  l: [default]
+- p: [3, 14]
+  k: K
   l: [default]
 - p: [7, 8]
   k: _
